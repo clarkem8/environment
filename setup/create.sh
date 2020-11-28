@@ -10,7 +10,7 @@ INSTANCE_NAME=echo $(get_ec2_tag Name)
 echo "Instance name is - $INSTANCE_NAME"
 
 # Get Ec2 instance tags
-export GIT_REPO=coding_projects
+export GIT_REPO=environments
 export GIT_USER=clarkem8
 export USER=clarkem8
 export INSTALL_TEST=Yes
