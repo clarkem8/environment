@@ -16,11 +16,11 @@ if [[ "$CF_INSTALL" == "Yes" ]];then
 
     # Install packages and run user install
     $GIT_PATH/setup/install_packages.sh
-    sudo su $USER $GIT_PATH/setup/user_setup.sh
+    sudo -i -u $USER $GIT_PATH/setup/user_setup.sh
 else
     # Install packages
     $base_path/install_packages.sh
     
     # Run user setup script
-    sudo su $USER $base_path/user_setup.sh
+    sudo -i -u $USER $base_path/user_setup.sh
 fi
