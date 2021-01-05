@@ -5,7 +5,6 @@ base_path=$(dirname $(readlink -f $0))
 
 # Add user
 useradd $USER
-export GIT_REPO=environment
 
 if [[ "$CF_INSTALL" == "Yes" ]];then
     # Install git and clone repo
@@ -13,7 +12,7 @@ if [[ "$CF_INSTALL" == "Yes" ]];then
     GIT_REPO=environment
     GIT_PATH=/home/$USER/github/$GIT_REPO
     echo "Git path is - $GIT_PATH"
-    sudo -i -u $USER git clone "https://github.com/$GIT_USER/$GIT_REPO.git" $GIT_PATH
+    sudo -i -u $USER git clone "https://github.com/$USER/$GIT_REPO.git" $GIT_PATH
 
     # Install packages and run user install
     $GIT_PATH/setup/install_packages.sh
