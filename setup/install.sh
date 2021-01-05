@@ -5,6 +5,7 @@ base_path=$(dirname $(readlink -f $0))
 
 # Add user
 useradd $USER
+export GIT_REPO=environment
 
 if [[ "$CF_INSTALL" == "Yes" ]];then
     # Install git and clone repo
