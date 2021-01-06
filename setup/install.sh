@@ -6,7 +6,7 @@ base_path=$(dirname $(readlink -f $0))
 # Add user
 useradd $USER
 
-if [[ "$CF_INSTALL" == "Yes" ]];then
+if [[ "$CLI_INSTALL" == "Yes" ]];then
     # Install git and clone repo
     yum install git -y
     GIT_REPO=environment
@@ -20,7 +20,6 @@ if [[ "$CF_INSTALL" == "Yes" ]];then
 else
     # Install packages
     $base_path/install_packages.sh
-    
     # Run user setup script
     sudo -i -u $USER $base_path/user_setup.sh
 fi
