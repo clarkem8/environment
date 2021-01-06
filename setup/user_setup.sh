@@ -5,8 +5,10 @@ base_path=$(dirname $(readlink -f $0))
 GIT_PATH="$base_path/../.."
 
 ## Configure aws cli
-# Find aws region from metadata
+# Find aws region and instance id from metadata
 REGION=$(/opt/aws/bin/ec2-metadata |grep placement|cut -c 12-20)
+INSTANCEID=$(/opt/aws/bin/ec2-metadata |grep instance-id| cut -c 14-80)
+echo "INSTANCEID=$INSTANCEID" >> $HOME/.env_vars
 echo "REGION=$REGION" >> $HOME/.env_vars
 
 mkdir $HOME/.aws
