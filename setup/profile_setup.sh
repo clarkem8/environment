@@ -17,5 +17,6 @@ INSTANCEID=$(/opt/aws/bin/ec2-metadata |grep instance-id| cut -c 14-80)
 echo "INSTANCEID=$INSTANCEID" >> $HOME/.env_vars
 
 # Setup vim
+echo "coping $GIT_PATH/environment/vim/.vimrc to $HOME/.vimrc"
 cp $GIT_PATH/environment/vim/.vimrc $HOME/.vimrc
 $GIT_PATH/environment/vim/vundle.sh
