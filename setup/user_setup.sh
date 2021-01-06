@@ -17,13 +17,13 @@ echo "output=json" >> $HOME/.aws/config
 
 # Export TAGS to .env_vars
 $base_path/export_tags.sh
+echo "GIT_PATH=$GIT_PATH" >> $HOME/.env_vars
 source $HOME/.env_vars
 
 # Setup user profile
 $base_path/profile_setup.sh
 
 # Clone git repo
-echo "GIT_PATH=$GIT_PATH" >> $HOME/.env_vars
 if [[ ! -d $GIT_PATH ]]; then
     echo "Git path is - $GIT_PATH"
     git clone "https://github.com/$GIT_USER/$GIT_REPO.git" $GIT_PATH
