@@ -13,8 +13,6 @@ echo 'export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m
 echo "" >> $HOME/.bash_profile
 
 echo "source $HOME/.env_vars" >> $HOME/.bash_profile
-INSTANCEID=$(/opt/aws/bin/ec2-metadata |grep instance-id| cut -c 14-80)
-echo "INSTANCEID=$INSTANCEID" >> $HOME/.env_vars
 
 # Setup vim
 echo "coping $GIT_PATH/environment/vim/.vimrc to $HOME/.vimrc"
