@@ -23,7 +23,6 @@ source $HOME/.env_vars
 $base_path/profile_setup.sh
 
 # Clone git repo
-GIT_PATH=$HOME/github/$GIT_REPO
 echo "GIT_PATH=$GIT_PATH" >> $HOME/.env_vars
 if [[ ! -d $GIT_PATH ]]; then
     echo "Git path is - $GIT_PATH"
