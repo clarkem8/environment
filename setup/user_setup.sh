@@ -2,7 +2,7 @@
 
 echo "Running $0"
 base_path=$(dirname $(readlink -f $0))
-GIT_PATH="$base_path/.."
+GIT_PATH="$base_path/../.."
 
 ## Configure aws cli
 # Find aws region from metadata
