@@ -13,7 +13,7 @@ tags=$(get_all_ec2_tags)
 for t in $tags;do
     echo "Found tag $tag"
     tag=$(get_ec2_tag $t)
-    if [[ "$tag" != "aws"* ]]; then
+    if [[ "$t" != "aws"* ]]; then
         echo "$t=$tag" >> $HOME/.env_vars
     fi
 done
