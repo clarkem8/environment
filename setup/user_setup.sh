@@ -34,8 +34,3 @@ fi
 # Install miniconda and initialise
 $base_path/miniconda_install.sh
 /home/$USER/miniconda/bin/conda init
-
-if [[ $INSTALL_TEST_CONDA_ENV == "true" ]]; then
-    # Install test conda environment
-    $GIT_PATH/conda_envs/create_env.sh $GIT_PATH/conda_envs/yaml_files/test.yml
-fi
