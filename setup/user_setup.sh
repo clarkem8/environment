@@ -34,3 +34,8 @@ fi
 # Install miniconda and initialise
 $base_path/miniconda_install.sh
 /home/$USER/miniconda/bin/conda init
+conda install -y conda-build
+
+# Create local conda repo
+mkdir -p /home/$USER/condarepo/linux-64
+conda index /home/$USER/condarepo/
