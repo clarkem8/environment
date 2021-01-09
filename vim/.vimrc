@@ -1,3 +1,6 @@
+set tabstop=4
+set shiftwidth=4
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
