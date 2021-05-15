@@ -28,6 +28,7 @@ $base_path/profile_setup.sh
 # Install miniconda and initialise
 $base_path/miniconda_install.sh
 /home/$USER/miniconda/bin/conda init
+source $HOME/.bash_profile
 conda install -y conda-build
 
 # Create local conda repo
