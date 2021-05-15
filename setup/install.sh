@@ -8,19 +8,12 @@ useradd $USER
 
 GIT_REPO=environment
 
-if [[ "$CLI_INSTALL" == "Yes" ]];then
-    # Install git and clone repo
-    yum install git -y
-    export GIT_PATH=/home/$USER/github
-    echo "Git path is - $GIT_PATH"
-    sudo -i -u $USER git clone "https://github.com/clarkem8/$GIT_REPO.git" $GIT_PATH/$GIT_REPO
+# Install git and clone repo
+yum install git -y
+export GIT_PATH=/home/$USER/github
+echo "Git path is - $GIT_PATH"
+sudo -i -u $USER git clone "https://github.com/clarkem8/$GIT_REPO.git" $GIT_PATH/$GIT_REPO
 
-    # Install packages and run user install
-    $GIT_PATH/$GIT_REPO/setup/install_packages.sh
-    sudo -i -u $USER $GIT_PATH/$GIT_REPO/setup/user_setup.sh
-else
-    # Install packages
-    $base_path/install_packages.sh
-    # Run user setup script
-    sudo -i -u $USER $base_path/user_setup.sh
-fi
+# Install packages and run user install
+$GIT_PATH/$GIT_REPO/setup/install_packages.sh
+sudo -i -u $USER $GIT_PATH/$GIT_REPO/setup/user_setup.sh
