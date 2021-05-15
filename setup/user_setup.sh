@@ -25,12 +25,6 @@ source $HOME/.env_vars
 # Setup user profile
 $base_path/profile_setup.sh
 
-# Clone git repo
-if [[ ! -d $GIT_PATH ]]; then
-    echo "Git path is - $GIT_PATH"
-    git clone "https://github.com/$GIT_USER/$GIT_REPO.git" $GIT_PATH
-fi
-
 # Install miniconda and initialise
 $base_path/miniconda_install.sh
 /home/$USER/miniconda/bin/conda init
