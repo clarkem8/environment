@@ -10,9 +10,9 @@ if [[ "$CLI_INSTALL" == "Yes" ]];then
     # Install git and clone repo
     yum install git -y
     GIT_REPO=environment
-    export GIT_PATH=/home/$USER/github/$GIT_REPO
+    export GIT_PATH=/home/$USER/github/
     echo "Git path is - $GIT_PATH"
-    sudo -i -u $USER git clone "https://github.com/clarkem8/$GIT_REPO.git" $GIT_PATH
+    sudo -i -u $USER git clone "https://github.com/clarkem8/$GIT_REPO.git" $GIT_PATH/$GIT_REPO
 
     # Install packages and run user install
     $GIT_PATH/setup/install_packages.sh
