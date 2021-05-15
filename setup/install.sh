@@ -12,7 +12,7 @@ if [[ "$CLI_INSTALL" == "Yes" ]];then
     GIT_REPO=environment
     export GIT_PATH=/home/$USER/github/$GIT_REPO
     echo "Git path is - $GIT_PATH"
-    sudo -i -u $USER git clone "https://github.com/$GIT_USER/$GIT_REPO.git" $GIT_PATH
+    sudo -i -u $USER git clone "https://github.com/clarkem8/$GIT_REPO.git" $GIT_PATH
 
     # Install packages and run user install
     $GIT_PATH/setup/install_packages.sh
