@@ -1,5 +1,6 @@
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
