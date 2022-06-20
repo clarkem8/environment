@@ -13,3 +13,4 @@ yum install -y epel-release
 yum install git -y
 yum install tmux -y
 yum install rlwrap -y
+yum install java -y
